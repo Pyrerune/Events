@@ -55,6 +55,9 @@ pub mod events {
                 if input::is_key_down(ctx, i) {
                     self.keycode = i;
                 }
+                if input::is_key_released(ctx, i) {
+                    self.keycode = PrintScreen;
+                }
             }
         }
         pub fn new() -> tetra::Result<KeyEvent> {
